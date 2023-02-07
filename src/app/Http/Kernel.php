@@ -4,8 +4,9 @@ namespace App\Http;
 
 use App\Http\Middleware\TrimStrings;
 use App\Http\Middleware\TrustProxies;
-use App\Http\Middleware\EncryptCookies;
 use App\Http\Middleware\JsonMiddleware;
+use Illuminate\Auth\Middleware\Authenticate;
+use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
 use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Http\Middleware\SetCacheHeaders;
 use Illuminate\Session\Middleware\StartSession;
@@ -16,7 +17,6 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Foundation\Http\Middleware\ValidatePostSize;
-use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull;
 
 final class Kernel extends HttpKernel
@@ -48,11 +48,11 @@ final class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        // 'auth' => \App\Http\Middleware\Authenticate::class,
-        // 'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        // 'bindings' => SubstituteBindings::class,
+        'auth' => Authenticate::class,
+        'auth.basic' => AuthenticateWithBasicAuth::class,
+        'bindings' => SubstituteBindings::class,
         'cache.headers' => SetCacheHeaders::class,
-        // 'can' => Authorize::class,
+        'can' => Authorize::class,
         'signed' => ValidateSignature::class,
         'throttle' => ThrottleRequests::class
     ];
@@ -66,7 +66,7 @@ final class Kernel extends HttpKernel
     protected $middlewarePriority = [
         StartSession::class,
         ShareErrorsFromSession::class,
-        // \App\Http\Middleware\Authenticate::class,
+        Authenticate::class,
         AuthenticateSession::class,
         JsonMiddleware::class,
         SubstituteBindings::class,
