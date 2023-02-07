@@ -41,6 +41,7 @@ return [
 
         'sentry' => [
             'driver' => 'sentry',
+            'level' => 'error'
         ],
 
         'single' => [
