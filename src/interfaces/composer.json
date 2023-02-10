@@ -1,0 +1,24 @@
+{
+    "name": "micromus/startup-interfaces",
+    "autoload": {
+        "psr-4": {
+            "Micromus\\Startup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Micromus\\Startup\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "keerill",
+            "email": "kirill.popkov.work@gmail.com"
+        }
+    ],
+    "require": {
+        "micromus/microservice-structure": "^1.1"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

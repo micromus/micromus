@@ -8,21 +8,25 @@
         <testsuite name="Unit">
             <directory>./app/Services/*/Tests/Unit</directory>
             <directory>./app/Support/*/Tests/Unit</directory>
+            <directory>./interfaces/tests/Unit</directory>
         </testsuite>
         <testsuite name="Feature">
             <directory>./app/Services/*/Tests/Feature</directory>
             <directory>./app/Support/*/Tests/Feature</directory>
+            <directory>./interfaces/tests/Feature</directory>
         </testsuite>
     </testsuites>
     <coverage processUncoveredFiles="true">
         <include>
             <directory suffix=".php">./app</directory>
+            <directory suffix=".php">./interfaces/src</directory>
         </include>
 
         <exclude>
             <directory suffix=".php">./app/Services/*/Tests</directory>
             <directory suffix=".php">./app/Services/*/Application/Database</directory>
             <directory suffix=".php">./app/Support/*/Tests</directory>
+            <directory suffix=".php">./interfaces/tests</directory>
         </exclude>
     </coverage>
     <php>

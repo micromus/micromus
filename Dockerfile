@@ -1,5 +1,5 @@
 ARG PHP_VERSION=8.1
-ARG COMPOSER_VERSION=2.4.1
+ARG COMPOSER_VERSION=2.5.2
 
 ###########################################
 # PHP dependencies
@@ -10,6 +10,7 @@ FROM composer:${COMPOSER_VERSION} AS vendor
 WORKDIR /var/www/html
 
 COPY ./src/composer* ./
+COPY ./src/interfaces/ ./interfaces
 
 RUN composer install \
   --no-dev \

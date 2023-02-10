@@ -11,7 +11,7 @@ final class IndexStartupControllerTest extends TestCase
      */
     public function test_get_message(): void
     {
-        $this->get('/')
+        $this->get('/v1/startup/message')
             ->assertOk()
             ->assertJsonPath('data.message', 'Hello world');
     }

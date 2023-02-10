@@ -3,10 +3,10 @@
 namespace App\Services\Startup\Interfaces\Http\Resources;
 
 use Illuminate\Http\Request;
+use Micromus\Startup\DataTransferObjects\StartupData;
 use OpenApi\Attributes\Schema;
 use OpenApi\Attributes\Property;
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Services\Startup\Infrastructure\DataTransferObjects\MessageData;
 
 #[Schema(
     title: 'Message Startup Resource',
@@ -15,7 +15,7 @@ use App\Services\Startup\Infrastructure\DataTransferObjects\MessageData;
 final class MessageStartupResource extends JsonResource
 {
     /**
-     * @var MessageData
+     * @var StartupData
      */
     public $resource;
 
@@ -23,10 +23,10 @@ final class MessageStartupResource extends JsonResource
     public string $message = 'Hello world';
 
     /**
-     * @param MessageData $resource
+     * @param StartupData $resource
      * @return void
      */
-    public function __construct(MessageData $resource)
+    public function __construct(StartupData $resource)
     {
         parent::__construct($resource);
     }

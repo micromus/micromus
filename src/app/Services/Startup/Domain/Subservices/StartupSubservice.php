@@ -2,16 +2,16 @@
 
 namespace App\Services\Startup\Domain\Subservices;
 
-use App\Services\Startup\Infrastructure\Contracts\GetStartupMessageInterface;
-use App\Services\Startup\Infrastructure\DataTransferObjects\MessageData;
 use Micromus\MicroserviceStructure\Attributes\RegisterAction;
+use Micromus\Startup\Contracts\GetStartupMessageInterface;
+use Micromus\Startup\DataTransferObjects\StartupData;
 
 final class StartupSubservice
     implements GetStartupMessageInterface
 {
     #[RegisterAction(GetStartupMessageInterface::class)]
-    public function getStartupMessage(): MessageData
+    public function getStartupMessage(): StartupData
     {
-        return new MessageData(message: 'Hello world');
+        return new StartupData(message: 'Hello world');
     }
 }

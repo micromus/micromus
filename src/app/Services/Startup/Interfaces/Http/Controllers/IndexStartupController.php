@@ -3,12 +3,12 @@
 namespace App\Services\Startup\Interfaces\Http\Controllers;
 
 use Micromus\ServiceSwagger\Attributes\Responses\ResourceResponse;
+use Micromus\Startup\Contracts\GetStartupMessageInterface;
 use OpenApi\Attributes\Tag;
 use OpenApi\Attributes\Get;
 use App\Http\Controllers\AbstractController;
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Services\Startup\Interfaces\Http\Resources\MessageStartupResource;
-use App\Services\Startup\Infrastructure\Contracts\GetStartupMessageInterface;
 
 #[Tag(
     name: 'Startup',
