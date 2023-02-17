@@ -27,7 +27,7 @@ services:
     image: postgres:15.1
     container_name: db
     ports:
-      - "3306:3306"
+      - "5432:5432"
     environment:
       POSTGRES_DB: '${DB_DATABASE:-application}'
       POSTGRES_USER: '${DB_USERNAME:-user}'
@@ -35,7 +35,7 @@ services:
     networks:
       - sail
     volumes:
-      - sail_db:/var/lib/mysql
+      - sail_db:/var/lib/postgresql/data
 networks:
   sail:
     driver: bridge
