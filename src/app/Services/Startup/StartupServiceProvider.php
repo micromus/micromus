@@ -13,6 +13,8 @@ final class StartupServiceProvider extends AbstractServiceProvider
      */
     protected function configureService(ServiceConfigurator $serviceConfigurator): void
     {
-        $serviceConfigurator->usingRoutes();
+        $serviceConfigurator
+            ->usingConfig('startup')
+            ->usingRoutes();
     }
 }

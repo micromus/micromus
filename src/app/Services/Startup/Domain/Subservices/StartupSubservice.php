@@ -12,6 +12,6 @@ final class StartupSubservice
     #[RegisterAction(GetStartupMessageInterface::class)]
     public function getStartupMessage(): MessageData
     {
-        return new MessageData(message: 'Hello world');
+        return new MessageData(config('services.startup.welcome_message'));
     }
 }

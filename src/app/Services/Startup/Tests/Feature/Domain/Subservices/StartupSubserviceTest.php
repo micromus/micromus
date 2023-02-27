@@ -14,6 +14,6 @@ final class StartupSubserviceTest extends TestCase
         $messageData = $this->app->make(StartupSubservice::class)
             ->getStartupMessage();
 
-        $this->assertEquals('Hello world', $messageData->message);
+        $this->assertEquals('Welcome to micromus!', $messageData->message);
     }
 }

@@ -13,6 +13,6 @@ final class IndexStartupControllerTest extends TestCase
     {
         $this->get('/')
             ->assertOk()
-            ->assertJsonPath('data.message', 'Hello world');
+            ->assertJsonPath('data.message', 'Welcome to micromus!');
     }
 }
