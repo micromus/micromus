@@ -42,10 +42,10 @@ return [
                 */
                 'annotations' => [
                     base_path('app/Http'),
-                    base_path('app/Services/*/Interfaces/Http')
-                ]
-            ]
-        ]
+                    base_path('app/Services/*/Interfaces/Http'),
+                ],
+            ],
+        ],
     ],
 
     'defaults' => [
@@ -73,7 +73,7 @@ return [
             /*
              * Route Group options
             */
-            'group_options' => []
+            'group_options' => [],
         ],
 
         'paths' => [
@@ -102,7 +102,7 @@ return [
              * @deprecated Please use `scanOptions.exclude`
              * `scanOptions.exclude` overwrites this
             */
-            'excludes' => []
+            'excludes' => [],
         ],
 
         'scanOptions' => [
@@ -142,7 +142,7 @@ return [
              * @note This option overwrites `paths.excludes`
              * @see \OpenApi\scan
             */
-            'exclude' => []
+            'exclude' => [],
         ],
 
         /*
@@ -178,7 +178,7 @@ return [
                 */
             ],
 
-            'security' => [[]]
+            'security' => [[]],
         ],
 
         /*
@@ -252,8 +252,8 @@ return [
                     * If set to true, adds PKCE to AuthorizationCodeGrant flow
                     */
                     'use_pkce_with_authorization_code_grant' => false,
-                ]
-            ]
+                ],
+            ],
         ],
 
         /*
@@ -261,6 +261,6 @@ return [
          */
         'constants' => [
             'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'http://my-default-host.com'),
-        ]
-    ]
+        ],
+    ],
 ];

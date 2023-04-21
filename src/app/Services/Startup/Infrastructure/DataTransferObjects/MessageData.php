@@ -8,5 +8,6 @@ final class MessageData extends Data
 {
     public function __construct(
         public string $message
-    ) {}
+    ) {
+    }
 }

@@ -36,25 +36,25 @@ return [
         'stack' => [
             'driver' => 'stack',
             'channels' => ['stderr', 'sentry'],
-            'ignore_exceptions' => false
+            'ignore_exceptions' => false,
         ],
 
         'sentry' => [
             'driver' => 'sentry',
-            'level' => 'error'
+            'level' => 'error',
         ],
 
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
-            'level' => 'debug'
+            'level' => 'debug',
         ],
 
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),
             'level' => 'debug',
-            'days' => 14
+            'days' => 14,
         ],
 
         'stderr' => [
@@ -63,13 +63,13 @@ return [
             'formatter' => env('LOG_STDERR_FORMATTER'),
             'with' => [
                 'stream' => 'php://stderr',
-            ]
+            ],
         ],
 
         'syslog' => [
             'driver' => 'syslog',
-            'level' => 'debug'
-        ]
+            'level' => 'debug',
+        ],
     ],
 
     /**
@@ -77,6 +77,6 @@ return [
      */
     'except' => [
         'password',
-        'password_confirmation'
-    ]
+        'password_confirmation',
+    ],
 ];

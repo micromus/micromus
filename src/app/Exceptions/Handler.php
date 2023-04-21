@@ -2,15 +2,15 @@
 
 namespace App\Exceptions;
 
-use Symfony\Component\HttpFoundation\Response;
-use Throwable;
-use Illuminate\Http\Request;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Auth\AuthenticationException;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Symfony\Component\Console\Exception\CommandNotFoundException;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException as LaravelValidationException;
+use Symfony\Component\Console\Exception\CommandNotFoundException;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Throwable;
 
 final class Handler extends ExceptionHandler
 {
@@ -18,7 +18,7 @@ final class Handler extends ExceptionHandler
      * @var array A list of the exception types that are not reported.
      */
     protected $dontReport = [
-        CommandNotFoundException::class
+        CommandNotFoundException::class,
     ];
 
     /**
@@ -32,9 +32,7 @@ final class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param Request $request
-     * @param Throwable $e
-     * @return Response
+     * @param  Request  $request
      *
      * @throws Throwable
      */
@@ -49,9 +47,7 @@ final class Handler extends ExceptionHandler
     }
 
     /**
-     * @param Request $request
-     * @param AuthenticationException $exception
-     * @return JsonResponse
+     * @param  Request  $request
      */
     protected function unauthenticated($request, AuthenticationException $exception): JsonResponse
     {
@@ -60,9 +56,7 @@ final class Handler extends ExceptionHandler
     }
 
     /**
-     * @param Request $request
-     * @param LaravelValidationException $exception
-     * @return JsonResponse
+     * @param  Request  $request
      */
     protected function invalidJson($request, LaravelValidationException $exception): JsonResponse
     {

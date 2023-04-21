@@ -7,10 +7,6 @@ use Micromus\MicroserviceStructure\Services\ServiceConfigurator;
 
 final class StartupServiceProvider extends AbstractServiceProvider
 {
-    /**
-     * @param ServiceConfigurator $serviceConfigurator
-     * @return void
-     */
     protected function configureService(ServiceConfigurator $serviceConfigurator): void
     {
         $serviceConfigurator

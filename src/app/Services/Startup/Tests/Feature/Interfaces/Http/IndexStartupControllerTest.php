@@ -6,9 +6,6 @@ use Tests\TestCase;
 
 final class IndexStartupControllerTest extends TestCase
 {
-    /**
-     * @return void
-     */
     public function test_get_message(): void
     {
         $this->get('/')

@@ -1,0 +1,8 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "control_structure_continuation_position": {
+            "position": "next_line"
+        }
+    }
+}

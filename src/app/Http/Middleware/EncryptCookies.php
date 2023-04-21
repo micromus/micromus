@@ -11,6 +11,6 @@ final class EncryptCookies extends Middleware
      */
     protected $except = [
         '_fm_uuid',
-        '_fm_search_uuid'
+        '_fm_search_uuid',
     ];
 }

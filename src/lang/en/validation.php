@@ -151,7 +151,7 @@ return [
         'middle_name' => 'Patronymic',
         'phone' => 'Phone number',
         'email' => 'Email',
-        
+
         'city' => 'City',
         'income' => 'Proof of income',
 
@@ -162,13 +162,13 @@ return [
         'payment_down' => 'Initial pay',
         'payment_actual' => 'Rest',
         'payment_month' => 'Monthly income',
-        
+
         'property_value' => 'Ownership value',
 
         'partner' => 'Partner token',
         'token' => 'Token',
 
-        'verification' => 'Verification'
+        'verification' => 'Verification',
     ],
 
 ];

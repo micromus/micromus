@@ -2,8 +2,8 @@
 
 namespace App\Http\Middleware;
 
-use Symfony\Component\HttpFoundation\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;
+use Symfony\Component\HttpFoundation\Request;
 
 final class TrustProxies extends Middleware
 {

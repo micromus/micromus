@@ -11,12 +11,9 @@ final class AppServiceProvider extends ServiceProvider
      * @var class-string[]
      */
     protected array $services = [
-        StartupServiceProvider::class
+        StartupServiceProvider::class,
     ];
 
-    /**
-     * @return void
-     */
     public function register(): void
     {
         $this->registerServices($this->services);
@@ -24,15 +21,11 @@ final class AppServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap any application services.
-     * @return void
      */
     public function boot(): void
-    {}
+    {
+    }
 
-    /**
-     * @param array $services
-     * @return void
-     */
     private function registerServices(array $services): void
     {
         foreach ($services as $service) {

@@ -2,13 +2,13 @@
 
 namespace App\Services\Startup\Interfaces\Http\Controllers;
 
-use Micromus\ServiceSwagger\Attributes\Responses\ResourceResponse;
-use OpenApi\Attributes\Tag;
-use OpenApi\Attributes\Get;
 use App\Http\Controllers\AbstractController;
-use Illuminate\Http\Resources\Json\JsonResource;
-use App\Services\Startup\Interfaces\Http\Resources\MessageStartupResource;
 use App\Services\Startup\Infrastructure\Contracts\GetStartupMessageInterface;
+use App\Services\Startup\Interfaces\Http\Resources\MessageStartupResource;
+use Illuminate\Http\Resources\Json\JsonResource;
+use Micromus\ServiceSwagger\Attributes\Responses\ResourceResponse;
+use OpenApi\Attributes\Get;
+use OpenApi\Attributes\Tag;
 
 #[Tag(
     name: 'Startup',
@@ -22,7 +22,7 @@ final class IndexStartupController extends AbstractController
         tags: ['Startup'],
 
         responses: [
-            new ResourceResponse(MessageStartupResource::class)
+            new ResourceResponse(MessageStartupResource::class),
         ]
     )]
     public function index(GetStartupMessageInterface $subservice): JsonResource
