@@ -22,10 +22,10 @@ docker run --rm \
     composer install --ignore-platform-reqs
     
 # Запуск приложения
-sail up -d
+./vendor/bin/sail up -d
 
 # Генерация ключа приложения
-sail artisan key:generate
+./vendor/bin/sail artisan key:generate
 ```
 
 Локальное развертывание завершено! [Развернутое приложение](http://localhost)
@@ -37,9 +37,6 @@ sail artisan key:generate
 как доступы к базе данных, редис и т.д.
 
 ```bash
-# Запуск команды для получения нового ключа приложения
-php artisan key:generate
-
 # Копирование ENV переменных
 cp .env.example .env
 

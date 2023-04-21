@@ -93,12 +93,6 @@ RUN apt-get install -y --no-install-recommends libpq-dev &&  \
 RUN docker-php-ext-install opcache
 
 # Install kafka
-#RUN apt-get install -y gnupg wget software-properties-common \
-#    && wget -qO - https://packages.confluent.io/deb/7.3/archive.key | apt-key add - \
-##    && add-apt-repository "deb https://packages.confluent.io/clients/deb $(lsb_release -cs) main"
-#RUN apt-get install -y libc6:amd64
-#RUN echo 'deb http://deb.debian.org/debian/ bookworm main contrib non-free' >> /etc/apt/sources.list
-
 RUN apt-get update && apt-get install -yqq --no-install-recommends librdkafka-dev \
       && pecl -q install -o -f rdkafka-5.0.2 \
       && docker-php-ext-enable rdkafka
