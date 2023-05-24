@@ -14,17 +14,16 @@
             <directory>./app/Support/*/Tests/Feature</directory>
         </testsuite>
     </testsuites>
-    <coverage processUncoveredFiles="true">
+    <source>
         <include>
-            <directory suffix=".php">./app</directory>
+            <directory>./app</directory>
         </include>
-
         <exclude>
-            <directory suffix=".php">./app/Services/*/Tests</directory>
-            <directory suffix=".php">./app/Services/*/Application/Database</directory>
-            <directory suffix=".php">./app/Support/*/Tests</directory>
+            <directory>./app/Services/*/Tests</directory>
+            <directory>./app/Services/*/Application/Database</directory>
+            <directory>./app/Support/*/Tests</directory>
         </exclude>
-    </coverage>
+    </source>
     <php>
         <server name="APP_ENV" value="testing"/>
         <server name="APP_KEY" value="base64:TzE8KB3DVdIL4b99/iCZnuLFDKqijcPwdxcfBKJFwuk="/>
