@@ -39,7 +39,9 @@ final class Kernel extends HttpKernel
     /**
      * @var array
      */
-    protected $middlewareGroups = [];
+    protected $middlewareGroups = [
+        'web' => []
+    ];
 
     /**
      * The application's route middleware.
